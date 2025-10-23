@@ -1,0 +1,31 @@
+<h1>Edit Student</h1>
+<form action="/students/<%= student._id %>" method="post" class="form">
+
+        <label>First Name
+            <input name="firstName" value="<%= student.firstName %>" required type="text">
+        </label>
+
+        <label>Last Name
+            <input name="lastName" value="<%= student.lastName %>" required type="text">
+        </label>
+
+        <label>Email
+            <input name="email" value="<%= student.email %>" required type="text">
+        </label>
+
+        <label>Cohort
+            <select name="cohort">
+                <option <%= student.cohort==='Year 2' ? 'selected': '' %> > Year 2</option>
+                <option <%= student.cohort==='Year 1' ? 'selected': '' %> > Year 1</option>
+                <option <%= student.cohort==='Alumni' ? 'selected': '' %> > Alumni</option>
+            </select>
+        </label>
+
+        <label>Interests
+            <input name="" value="" type="text">
+        </label>
+
+        <label>Notes
+            <textarea name="notes" id="notes"><%= student.notes %></textarea>
+        </label>
+    </form>

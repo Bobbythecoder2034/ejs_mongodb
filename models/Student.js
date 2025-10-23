@@ -16,4 +16,4 @@ studentSchema.virtual("fullName").get(function(){
 })
 
 export default mongoose.model("Student", studentSchema)
-// emum is a schema type option that is used to restrict the values of a field to a predefined set
+// enum is a schema type option that is used to restrict the values of a field to a predefined set
